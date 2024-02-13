@@ -7,44 +7,79 @@
     </head>
     <body>
         <div class="navbar">
-            <div class="logo"></div>
+            <div class="home">
+                <a href="#top">
+                    <img class="home" src="" alt="Home" />
+                </a>
+            </div>
             <ul>
                 <li>About Me</li>
                 <li>Skills</li>
                 <li>Projects</li>
             </ul>
+            <div class="github">
+                <a href="https://github.com/DragonflyValkyrie?tab=repositories">
+                    <img
+                        class="navbar-links"
+                        src='<%=require("./images/github-white.png")%>'
+                        alt="LinkedIn-logo"
+                    />
+                </a>
+            </div>
             <div class="linkedin">
                 <a href="https://www.linkedin.com/">
-                    <img src=<%=require("/images/Li-Logo.png")% alt="LinkedIn-logo" />
+                    <img
+                        class="navbar-links"
+                        src='<%=require("./images/Li-Logo-Small.png")%>'
+                        alt="LinkedIn-logo"
+                    />
                 </a>
             </div>
         </div>
         <div class="about-container"></div>
 
         <div class="skills-container">
-            <div class="scroller">
+            <div class="scroller" data-direction="left" data-speed="normal">
                 <ul class="tag-list scroller_inner">
                     <img
-                        src="https://i.pravatar.cc/150?img=1"
+                        class="logos"
+                        src='<%=require("./images/html-logo.png")%>'
                         alt="HTML Logo"
                     />
-                    <img src="https://i.pravatar.cc/150?img=3" alt="CSS Logo" />
                     <img
-                        src="https://i.pravatar.cc/150?img=2"
+                        class="logos"
+                        src='<%=require("./images/css-logo.png")%>'
+                        alt="CSS Logo"
+                    />
+                    <img
+                        class="logos"
+                        src='<%=require("./images/js-logo.png")%>'
                         alt="JavaScript Logo"
                     />
                     <img
-                        src="https://i.pravatar.cc/150?img=3"
+                        class="logos"
+                        src='<%=require("./images/jest-logo.png")%>'
                         alt="Jest Logo"
                     />
                     <img
-                        src="https://i.pravatar.cc/150?img=4"
+                        class="logos"
+                        src='<%=require("./images/webpack-logo.png")%>'
                         alt="Webpack Logo"
                     />
-                    <img src="https://i.pravatar.cc/150?img=5" alt="Git Logo" />
                     <img
-                        src="https://i.pravatar.cc/150?img=6"
+                        class="logos"
+                        src='<%=require("./images/git-logo.png")%>'
+                        alt="Git Logo"
+                    />
+                    <img
+                        class="logos"
+                        src='<%=require("./images/github-white.png")%>'
                         alt="GitHub Logo"
+                    />
+                    <img
+                        class="logos"
+                        src='<%=require("./images/npm-logo.png")%>'
+                        alt="npm Logo"
                     />
                 </ul>
             </div>
