@@ -1,19 +1,22 @@
-# javascript-template
+# Portfolio
 
-A webpack template to use on new projects
+This is my first iteration of my webdev portfolio. Live Preview: [Here](https://dragonflyvalkyrie.github.io/portfolio-v1/)
 
-## Build
+## Features
 
-`npm run build`
+Smooth scrolling of skills
 
-## Test
+## Development Stack and Libraries
 
-`jest`
+-   HTML
+-   CSS
+-   Javascript
+-   Webpack
 
 ## Run locally
 
-`npm run watch`
+`npm install`
 
-## Deploy to git
+`npm run build`
 
-`npm run deploy`
+Open the dist index.html
