@@ -14,16 +14,57 @@
 }
 
 body {
-    background-color: gray;
+    margin: 0;
+    padding: 0;
+    background-color: #1a3a46;
 }
 
 h1 {
     color: orange;
 }
 
-.navbar-links {
-    height: 35px;
-    width: 35px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24252a;
+    padding: 30px 5%;
+}
+
+.navbar-icons {
+    height: 25px;
+    width: 25px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li,
+a {
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+li a:hover {
+    transition: all 0.3s ease 0s;
+    color: #0088a9;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.github {
+    margin-right: 25px;
 }
 
 .skills-container {
@@ -54,7 +95,7 @@ h1 {
     padding-block: 1em;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
 }
 
 .scroller[data-animated='true'] {
@@ -106,6 +147,16 @@ h1 {
     to {
         transform: translate(calc(-50% - 0.5rem));
     }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 125px;
+    min-height: 125px;
+    background-color: #24252a;
+    border-radius: 10px;
 }
 
 .logos {
