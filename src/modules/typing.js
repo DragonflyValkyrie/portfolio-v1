@@ -3,8 +3,10 @@ import '../style.css';
 function typing() {
     const dynamicText = document.querySelector('.dynamic-text');
     const words = [
-        'Creative',
+        'Creator',
+        'Designer',
         'Developer',
+        'Computer engineer',
         'Full stack developer',
         'Software developer',
     ];

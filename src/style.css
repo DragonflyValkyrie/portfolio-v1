@@ -81,11 +81,17 @@ li a:hover {
 /*About*/
 
 .about-container {
-    min-height: 100vh;
+    min-height: 60vh;
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    margin: 25px;
 }
 
 h1 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .stars {
@@ -107,6 +113,7 @@ h1 {
 }
 
 .static-text {
+    font-size: 40px;
 }
 
 .dynamic-text {
@@ -136,11 +143,70 @@ h1 {
     }
 }
 
+.about-container p {
+    max-width: 75%;
+    font-size: 24px;
+}
+
+.projects-slider .list .item .project-content h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.projects-slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showProjectContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.about-container .portfolio-bar,
+.about-container h2,
+.about-container p {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showProjectContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+
+.about-container .portfolio-bar {
+    animation-delay: 1s;
+}
+
+.about-container h2 {
+    animation-delay: 1.3s;
+}
+
+.about-container p {
+    animation-delay: 1.5s;
+}
+
 /*Scrolling skills*/
 .skills-container {
     display: grid;
-    min-block-size: 100vh;
+    min-block-size: 40vh;
     place-content: center;
+    place-items: center;
+}
+
+.skills-container h2 {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showProjectContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+
+.skills-container h2 {
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    animation-delay: 1.7s;
 }
 
 .tag-list {
