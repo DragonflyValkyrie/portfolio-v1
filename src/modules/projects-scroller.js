@@ -6,6 +6,7 @@ function projectScrolling() {
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
     let thumbnails = document.querySelectorAll('.thumbnail .item');
+    let thumbnailContainer = document.querySelector('.thumbnail');
 
     // Counting the total number of items in the project slider
     let countItem = items.length;
@@ -14,28 +15,22 @@ function projectScrolling() {
 
     // Handling the click event for the "Next" button
     next.onclick = function () {
-        itemActive = itemActive + 1;
-        // If reached the end, loop back to the first item
-        if (itemActive >= countItem) {
-            itemActive = 0;
-        }
+        itemActive = (itemActive + 1) % countItem;
         showProjectSlider();
+        updateThumbnailScroll();
     };
 
     // Handling the click event for the "Previous" button
     prev.onclick = function () {
-        itemActive = itemActive - 1;
-        // If at the first item, loop to the last item
-        if (itemActive < 0) {
-            itemActive = countItem - 1;
-        }
+        itemActive = (itemActive - 1 + countItem) % countItem;
         showProjectSlider();
+        updateThumbnailScroll();
     };
 
-    // Setting up an automatic slider with a 5-second interval
+    // Setting up an automatic slider with an interval
     let refreshInterval = setInterval(() => {
         next.click();
-    }, 5000);
+    }, 15000);
 
     // Function to update the project slider based on the active item
     function showProjectSlider() {
@@ -59,7 +54,16 @@ function projectScrolling() {
         clearInterval(refreshInterval);
         refreshInterval = setInterval(() => {
             next.click();
-        }, 5000);
+        }, 15000);
+    }
+
+    // Function to update the thumbnail container's scroll position
+    function updateThumbnailScroll() {
+        let thumbnailWidth = thumbnails[0].offsetWidth;
+        let containerWidth = thumbnailContainer.offsetWidth;
+        let scrollPosition =
+            thumbnailWidth * itemActive - (containerWidth - thumbnailWidth) / 2;
+        thumbnailContainer.scrollLeft = scrollPosition;
     }
 
     // Adding click event listeners to each thumbnail for direct navigation
@@ -68,6 +72,7 @@ function projectScrolling() {
             // Update the active item based on the clicked thumbnail
             itemActive = index;
             showProjectSlider();
+            updateThumbnailScroll();
         });
     });
 }
