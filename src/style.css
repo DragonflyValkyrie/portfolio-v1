@@ -81,13 +81,13 @@ li a:hover {
 /*About*/
 
 .about-container {
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     align-content: center;
     justify-content: start;
     flex-direction: column;
     padding: 20px;
-    margin: 25px;
+    margin: 25px 25px 25px 10%;
 }
 
 h1 {
@@ -112,8 +112,20 @@ h1 {
     background: linear-gradient(135deg, #24252a, #325a63);
 }
 
+.wrapper {
+}
+
 .static-text {
-    font-size: 40px;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 700px) {
+    .static-text {
+        font-size: 24px;
+    }
+    .about-container p {
+        font-size: 12px;
+    }
 }
 
 .dynamic-text {
@@ -144,8 +156,14 @@ h1 {
 }
 
 .about-container p {
-    max-width: 75%;
+    max-width: 70%;
     font-size: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+    .about-container p {
+        max-width: 50%;
+    }
 }
 
 .projects-slider .list .item .project-content h2 {
@@ -190,7 +208,7 @@ h1 {
 /*Scrolling skills*/
 .skills-container {
     display: grid;
-    min-block-size: 40vh;
+    min-block-size: 45vh;
     place-content: center;
     place-items: center;
 }
