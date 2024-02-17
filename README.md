@@ -4,7 +4,10 @@ This is my first iteration of my webdev portfolio. Live Preview: [Here](https://
 
 ## Features
 
-Smooth scrolling of skills
+-   Dynamically typed titles
+-   Smooth infinte scrolling of skills
+-   Projects that can be interactive with the thumbnails and arrows. Focus one project at a time and find more deatils about it.
+-   Coded in vanilla HTML, CSS and Javascript
 
 ## Development Stack and Libraries
 

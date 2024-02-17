@@ -27,7 +27,16 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #24252a;
-    padding: 30px 5%;
+    padding: 10px 5%;
+}
+
+.home {
+    height: 75px;
+    width: 75px;
+}
+
+.home img {
+    top: 10px;
 }
 
 .navbar-icons {
